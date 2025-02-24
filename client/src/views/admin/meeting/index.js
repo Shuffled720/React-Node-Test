@@ -80,7 +80,6 @@ const Index = () => {
     const fetchData = async () => {
         setIsLoding(true)
         const result = await dispatch(fetchMeetingData())
-        console.log(result.payload.data);
         
         if (result.payload.status === 200) {
             setData(result?.payload?.data.data);
